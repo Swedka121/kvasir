@@ -1,0 +1,25 @@
+{
+  "name": "@org/backend-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@org/backend"
+    ],
+    "targets": {
+      "e2e": {
+        "command": "jest --passWithNoTests",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "dependsOn": [
+          "@org/backend:build",
+          "@org/backend:serve"
+        ],
+        "options": {
+          "cwd": "/apps/backend-e2e"
+        }
+      }
+    }
+  }
+}
