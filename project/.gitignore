@@ -54,3 +54,6 @@ Thumbs.db
 out
 vitest.config.*.timestamp*
 .vitest
+
+.env
+apps/**/.env

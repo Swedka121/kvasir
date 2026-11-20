@@ -54,6 +54,7 @@
   "workspaces": [
     "packages/*",
     "apps/*",
+    "/apps/frontend",
     "/apps/backend",
     "/apps/backend-e2e"
   ],
