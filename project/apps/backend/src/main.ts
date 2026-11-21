@@ -9,9 +9,15 @@ import { AppModule } from './app/app.module';
 import { MikroORM } from '@mikro-orm/core';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    bodyParser: false,
+  });
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
+
+  const orm = app.get(MikroORM);
+  await orm.migrator.up();
+
   const port = process.env.PORT || 4000;
   await app.listen(port);
   // Set when Nx waits for this server to be ready
@@ -26,9 +32,6 @@ async function bootstrap() {
       // @nx/js isn't installed
     }
   }
-
-  const orm = app.get(MikroORM)
-  await orm.migrator.up()
 
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
