@@ -11,7 +11,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"nrwl.angular-console"
+				"nrwl.angular-console",
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	},
