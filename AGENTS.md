@@ -1,6 +1,10 @@
 <!-- nx configuration start-->
 <!-- Leave the start & end comments to automatically receive updates. -->
 
+# Project-specific instructions
+
+Before working in this project, read [`Agent.md`](./project/Agent.md) for the development setup and project-specific guidance.
+
 # General Guidelines for working with Nx
 
 - For navigating/exploring the workspace, invoke the `nx-workspace` skill first - it has patterns for querying projects, targets, and dependencies
