@@ -11,6 +11,12 @@
     },
     {
       "path": ".//apps/backend"
+    },
+    {
+      "path": ".//apps/lending"
+    },
+    {
+      "path": ".//packages/ui"
     }
   ],
   "compilerOptions": {}

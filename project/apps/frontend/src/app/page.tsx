@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import * as Card from "../components/ui/card"
+import { Button } from "@org/ui/components/ui/button"
+import * as Card from "@org/ui/components/ui/card"
 import Link from "next/link"
 
 export default function Page() {

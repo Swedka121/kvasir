@@ -96,6 +96,11 @@
         "style": "none",
         "linter": "eslint"
       }
+    },
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "none"
+      }
     }
   },
   "targetDefaults": {
