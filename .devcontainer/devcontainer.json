@@ -12,7 +12,8 @@
 		"vscode": {
 			"extensions": [
 				"nrwl.angular-console",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"esbenp.prettier-vscode"
 			]
 		}
 	},

@@ -11,6 +11,15 @@ import { MikroORM } from '@mikro-orm/core';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bodyParser: false,
+    cors: {
+      credentials: true,
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:3001',
+        'tauri://localhost',
+        'http://tauri.localhost',
+      ],
+    },
   });
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);

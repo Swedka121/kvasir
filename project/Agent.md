@@ -9,9 +9,9 @@ The Dev Container configuration is in the repository root, one directory above t
 The Nx workspace root is this directory (`project/`). Configure the local `.env` here with:
 
 - `DB_URL` for the PostgreSQL connection
-- `BETTER_AUTH_BASE_URL` for the backend auth API
+- `BETTER_AUTH_BASE_URL` for the backend origin (for example, `http://localhost:4000`; Better Auth is mounted at `/api/auth`)
 - `BETTER_AUTH_SECRET` as a private secret
-- `NEXT_PUBLIC_BACKEND_URL` for the frontend's backend URL
+- `NEXT_PUBLIC_BACKEND_URL` for the frontend's backend origin (for example, `http://localhost:4000`)
 
 Do not expose or commit local environment values. Install dependencies from this directory with `npm install` when needed.
 

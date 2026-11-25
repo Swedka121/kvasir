@@ -1,10 +1,16 @@
 import './global.css';
-import { IBM_Plex_Sans, Raleway } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { IBM_Plex_Sans, Raleway } from 'next/font/google';
+import { cn } from '@/lib/utils';
 
-const ralewayHeading = Raleway({subsets:['latin'],variable:'--font-heading'});
+const ralewayHeading = Raleway({
+  subsets: ['latin'],
+  variable: '--font-heading',
+});
 
-const ibmPlexSans = IBM_Plex_Sans({subsets:['latin'],variable:'--font-sans'});
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export const metadata = {
   title: 'Welcome to frontend',
@@ -17,8 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("font-sans", ibmPlexSans.variable, ralewayHeading.variable, "dark")}>
-      <body className='bg-background'>{children}</body>
+    <html
+      lang="en"
+      className={cn(
+        'font-sans',
+        ibmPlexSans.variable,
+        ralewayHeading.variable,
+        'dark',
+      )}
+    >
+      <body className="bg-background">{children}</body>
     </html>
   );
 }
