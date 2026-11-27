@@ -22,6 +22,7 @@ export function useDeepLinkAuthHandler({
     let unlisten: (() => void) | undefined;
 
     const handleUrl = async (rawUrl: string) => {
+      console.log(rawUrl);
       let url: URL;
       try {
         url = new URL(rawUrl);

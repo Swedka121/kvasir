@@ -12,9 +12,11 @@ export default function Page() {
   useEffect(() => {
     openUrl(process.env.NEXT_PUBLIC_LENDING_URL! + '/login');
   }, []);
+
   const { error } = useDeepLinkAuthHandler({
     onSuccess: () => router.push('/app'),
   });
+
   if (error)
     return (
       <section className="w-screen h-screen flex flex-col items-center">
